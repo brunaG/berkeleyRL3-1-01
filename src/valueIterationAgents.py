@@ -58,8 +58,11 @@ class ValueIterationAgent(ValueEstimationAgent):
         """
           Compute the Q-value of action in state from the
           value function stored in self.values.
+          state=(x, y)
+          action=('north'| 'west'| 'south'| 'east')
         """
         "*** YOUR CODE HERE ***"
+
         util.raiseNotDefined()
 
     def computeActionFromValues(self, state):
