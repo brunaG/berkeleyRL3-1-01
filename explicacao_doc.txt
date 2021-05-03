@@ -1,0 +1,13 @@
+Código principal: gridworld.py
+- Cada iteração eh executada pela função runEpisode.
+	- A função recebe 8 parâmetros nessa ordem:
+		-agent: Classe com os parametros do agente sendo Action,value, Qvalue, policy e update
+		-environment: Classe do tipo GridworldEnvironment do modulo gridworld. Contem o estado do agente no atributo state, q eh um tupla com valor x,y. Quando o estado for terminal, a chamada irá retornar 'TERMINAL_STATE'. Tal estado pode ser avaliado com o método isTerminal. Contem um metodo, getPossibleActions,para gerar as possiveis ações ('north','west','south','east').
+		-discount: Valor de 0 a 1
+		-decision: decisionCallback, vai chamar a acao do agente com getAction
+		-display: displayCallback, vai mostrar o Value do agente adequado pra chamada
+		-message: messageCallback, paramettro pra printar ou não o resutlado de cada episodio
+		-pause: pauseCallBack, controla a pausa no modo manual
+		-episode: nº do ep (iteração)
+	- A função retorna um número
+		
