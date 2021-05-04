@@ -49,14 +49,14 @@ class ValueIterationAgent(ValueEstimationAgent):
         for i in range(self.iterations):
             update_values=self.values.copy()
             for state in self.mdp.getStates():
-                best_value = -1000000
+                best_value = -1000000 #The value may be negative
                 if(not self.mdp.isTerminal(state)):
                     for action in self.mdp.getPossibleActions(state):
                         value_i = self.computeQValueFromValues(state, action)
                         if value_i>best_value:
                             best_value=value_i
                 else:
-                    best_value=0
+                    best_value=0 #If there is no more movements, the value is 0
                 update_values[state] = best_value
             self.values=update_values
 
@@ -79,7 +79,7 @@ class ValueIterationAgent(ValueEstimationAgent):
       Qvalue = 0
       for step in next_steps_list:
           Qvalue = Qvalue + step[1] * (self.mdp.getReward(state, action, step[0]) +
-                                       self.discount * self.values[step[0]])
+                                       self.discount * self.values[step[0]])#There's no -Q on the equation
       return Qvalue
           
     def computeActionFromValues(self, state):
