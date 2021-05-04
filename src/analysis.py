@@ -24,38 +24,47 @@ def question2():
     answerNoise = 0.00001
     return answerDiscount, answerNoise
 
+#Q3
+#noise=How often action results in unintended direction(default 0.2)
+#discount=Discount on future (default 0.9)
+#livingReward=Reward for living for a time step (default 0.0)
 def question3a():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    #Prefer the close exit (+1), risking the cliff (-10)
+    answerDiscount = .1
+    answerNoise = 0.0001
+    answerLivingReward =0.5
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3b():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    #Prefer the close exit (+1), but avoiding the cliff (-10)
+    answerDiscount = 0.01
+    answerNoise = 0.01
+    answerLivingReward = 0.4
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3c():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    #Prefer the distant exit (+10), risking the cliff (-10)
+    answerDiscount = 0.3
+    answerNoise = 0.001
+    answerLivingReward = 0.4
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3d():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    #Prefer the distant exit (+10), avoiding the cliff (-10)
+    answerDiscount = 0.3
+    answerNoise = 0.2
+    answerLivingReward = 0.4
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3e():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    #Avoid both exits and the cliff (so an episode should never terminate)
+    answerDiscount = 0.001
+    answerNoise = 0.8
+    answerLivingReward = 0.8
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
