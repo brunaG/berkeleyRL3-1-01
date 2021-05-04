@@ -69,9 +69,11 @@ def question3e():
     # If not possible, return 'NOT POSSIBLE'
 
 def question6():
-    answerEpsilon = None
-    answerLearningRate = None
-    return answerEpsilon, answerLearningRate
+    #--epsilon=E     Chance of taking a random action in q-learning (default 0.3)
+    #--learningRate=    TD learning rate (default 0.5)
+    answerEpsilon = 0.1
+    answerLearningRate = 0.8
+    return 'NOT POSSIBLE'
     # If not possible, return 'NOT POSSIBLE'
 
 if __name__ == '__main__':
